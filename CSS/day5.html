@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units</title>
+  </head>
+
+
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+   
+    body{
+        min-height: 100vh;
+        width: 100vw;
+    }
+    .container{
+        border: 2px solid black;
+        height: 50vh;
+        width: 50vw;
+        /* font-size: 2rem; */
+    }
+
+    /* Relative Units rem */
+    /* h2{
+        font-size: 2em;
+    }
+    p{
+     font-size: 1em; 
+    } */
+
+
+
+    /* ! Layout & Viewport units */
+
+    h2{
+        font-size: 5vw;
+    }
+
+    p{
+        font-size: 5vw;
+    }
+
+  </style>
+
+  <body>
+    <!-- ! Absolute Unit: px-->
+
+    <div class="container">
+      <h2>This is a testing para</h2>
+      <p class="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, esse
+        suscipit quisquam saepe similique aperiam, at quas nostrum dolorum,
+        dolore temporibus quos harum dicta. Nesciunt fugit amet voluptatem fuga
+        sint.
+      </p>
+    </div>
+  </body>
+</html>
