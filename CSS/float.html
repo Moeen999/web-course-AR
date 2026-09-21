@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float CSS</title>
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;  
+    }
+    .float-container{
+        width: 50%;
+        height: 300px;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+    .float-container img{
+        float: right;
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+</style>
+<body>
+
+    <div class="float-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolores, hic saepe sint laboriosam ipsa, asperiores beatae sapiente repellat nisi tenetur magnam dolorum corporis fugiat reiciendis modi id similique dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quo ut cupiditate distinctio, ab beatae dolorem error. Quaerat doloribus obcaecati error dolorem quia incidunt laudantium, nobis distinctio modi fuga voluptate.</p>
+        <img src="/public/bypassgpts-logo.webp" alt="">
+    </div>
+    
+</body>
+</html>
