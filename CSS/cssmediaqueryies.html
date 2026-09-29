@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>CSS Media Queries - V-IMP</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    }
+    body {
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+    }
+
+    .navbar li {
+      margin-left: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    #menu-icon {
+      visibility: hidden;
+      /* font-size: 24px; */
+      color: white;
+      cursor: pointer;
+    }
+
+
+    /* Media Queries */
+    @media(max-width: 768px) {
+      .navbar {
+        display: none;
+      }
+
+       #menu-icon {
+        visibility: visible;
+      }
+
+      .navbar li {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+    }
+  </style>
+
+  <body>
+    <div class="navbar-container">
+      <div class="logo">
+        <h1>My Website</h1>
+      </div>
+      <nav>
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <i class="fa-duotone fa-solid fa-bars" id="menu-icon"></i>
+      </nav>
+    </div>
+  </body>
+</html>

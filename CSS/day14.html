@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      background-color: red;
+      /* animation-name: myAnimation;
+      animation-duration: 4s;
+        animation-iteration-count: infinite; */
+        animation: myAnimation 4s infinite;
+        animation-delay: 5s;
+    }
+
+    @keyframes myAnimation{
+        0% {
+            transform: translateX(0);
+            transform: rotate(180deg);
+            background-color: red;
+        }
+        25% {
+            transform: translateY(100px);
+
+            background-color: blue;
+        }
+        50% {
+            transform: translateX(-200px);
+
+            background-color: green;
+        }
+        75% {
+            transform: translateY(-300px);
+
+            background-color: yellow;
+        }
+        100% {
+            transform: translateX(400px);
+
+            background-color: purple;
+        }
+    }
+  </style>
+
+  <body>
+    <div class="container"></div>
+  </body>
+</html>
