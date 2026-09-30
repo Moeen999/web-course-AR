@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>CSS Media Queries - V-IMP</title>
   </head>
 
@@ -30,6 +36,7 @@
     body {
       height: 100vh;
       background-color: #f0f0f0;
+      overflow-x: hidden;
     }
 
     .navbar-container {
@@ -67,14 +74,13 @@
       cursor: pointer;
     }
 
-
     /* Media Queries */
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       .navbar {
         display: none;
       }
 
-       #menu-icon {
+      #menu-icon {
         visibility: visible;
       }
 
@@ -82,8 +88,63 @@
         margin-left: 0;
         margin-top: 10px;
       }
+    }
+
+
+    /* Hero Section Styling  */
+
+    .hero-section {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      margin:  0 auto;
+      background-color: #fff;
+    }
+
+    .text-container {
+      max-width: 50%;
+    }
+
+    .text-container h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .img-container {
+      max-width: 500px;
 
     }
+    .image-container img {
+      max-width: 500px;
+      border-radius: 10px;
+      /* height: auto; */
+    }
+
+
+    @media (max-width:768px){
+      .hero-section{
+        flex-direction: column;
+        text-align: center;
+        height: 50vh;
+      }
+
+      .text-container{
+        max-width: 100%;
+      }
+      
+      .image-container{
+        max-width: 100%;
+      }
+
+      .image-container img{
+        max-width: 50%;
+      }
+
+    }
+
   </style>
 
   <body>
@@ -100,6 +161,20 @@
         </ul>
         <i class="fa-duotone fa-solid fa-bars" id="menu-icon"></i>
       </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="text-container">
+        <span
+          >Hi I am
+          <h1>Muhammad Moeen</h1>
+          a Full Stack JS Web Developer.</span
+        >
+      </div>
+      <div class="image-container">
+        <img src="/public/image.png" alt="">
+      </div>
     </div>
   </body>
 </html>
