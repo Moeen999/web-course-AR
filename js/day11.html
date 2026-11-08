@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS day 11 | Built In methods of objects in JS</title>
+  </head>
+  <body>
+    <h1>
+      Hey I am today learning about the concepts of the JS Obejct built in
+      methods
+    </h1>
+
+    <script>
+      // const person1 = {
+      //   firstName: "John",
+      //   lastName: "Doe",
+      //   age: 50,
+      //   eyeColor: "blue"
+      // };
+
+      // const person2 = {
+      //     firstName:"Moeen",
+      //     lastName:"Malik",
+      //     age:23
+      // }
+
+      // Object.assign(person1,person2)
+      // console.log(person1)
+
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+        hobbies: {
+          isAdmin: true,
+          isCrickedLover: true,
+          isGameLover: false,
+        },
+      };
+      Object.freeze(person);
+      Object.freeze(person.hobbies); // this will freeze the nested object as well
+      person.hobbies.isAdmin = false;
+      console.log(person);
+      // let txt = Object.entries(person)
+
+      // ! the object freeze method only freezez to the top level of the object and not the nested objects. So in this case the hobbies object is still mutable and can be changed.
+      //  the ways we can freeze the nested objects is by using the Object.freeze method on the nested object as well. also by a loop by iterating over the object and freezing each nested object as well.
+
+      for (const keys in person) {
+        // very important interview QS
+        if (typeof person[keys] === "object") {
+          Object.freeze(person[key]);
+        }
+      }
+    </script>
+  </body>
+</html>
